@@ -216,3 +216,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Generated data — regenerate with data-generator/generate_data.py
+data/raw/**
+
+# Python
+.venv/
+__pycache__/
+*.pyc
