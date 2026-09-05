@@ -1,0 +1,8 @@
+sources:
+    - name: silver
+      schema: silver
+      tables:
+        - name: customers
+        - name: accounts
+        - name: merchants
+        - name: transactions
