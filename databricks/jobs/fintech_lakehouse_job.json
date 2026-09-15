@@ -1,0 +1,18 @@
+resources:
+  jobs:
+    New_Job_2026_09_12_14_09_17:
+      name: New Job 2026-09-12 14:09:17
+      tasks:
+        - task_key: bronze_ingestion
+          notebook_task:
+            notebook_path: /Workspace/Users/bhavyaben.ben@gmail.com/fintech-lakehouse-fraud-analytics/databricks/bronze/01_bronze_ingestion.py
+            source: WORKSPACE
+        - task_key: silver_cleansing
+          depends_on:
+            - task_key: bronze_ingestion
+          notebook_task:
+            notebook_path: /Workspace/Users/bhavyaben.ben@gmail.com/fintech-lakehouse-fraud-analytics/databricks/bronze/02_silver_cleansing.py
+            source: WORKSPACE
+      queue:
+        enabled: true
+      performance_target: PERFORMANCE_OPTIMIZED
